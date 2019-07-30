@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width-device=width, initial-scale=1">
+
+		<script src="js/jquery.js"></script>
+		<script src="js/bootstrap.js"></script>
+		<script src="js/fa.js"></script>	
+		<script src="js/alert.js"></script>
+		<script src="js/canvas.js"></script>
+ 		<title>Index</title>
+
+        <script src="js/jquery.dataTables.min.js"></script>
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/dataTables.bootstrap.min.css">
+        <script src="js/dataTables.bootstrap.min.js"></script>
+
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+		<link rel="stylesheet" type="text/css" href="css/dash_style.css">
+	</head>
+<body>
+
+	<style>
+	body{
+		background: linear-gradient(to left,red 10%,skyblue 80%);
+	}
+	</style>
+
+	<div class="col-md-4">
+	</div>
+	<div class="col-md-4" style="margin-top:30px;margin-bottom:30px">
+		<div class="col-md-12">
+		</div>
+
+			<ul class="list-group" >
+				<li class="list-group-item active">
+					<h1><center>Masuk</center></h1>
+					<br>
+					<center><i class="fa fa-user-circle fa-7x"></i></center>
+				</li>			
+				<li class="list-group-item"><input type="text" class="form-control" placeholder="Nama . . ."></li>
+				<li class="list-group-item">
+					<input type="password" class="form-control" placeholder="Sandi . . ." id="sandi" class="form-control" onkeyup="cek_sandi()" onkeydown="cek_sandi()" onkeypress="cek_sandi()" onfocus="cek_sandi()">
+					<br>
+					 <div id="panjang_pass1"><span id='panjang_pass'>Lemah</span></div>
+					<i onclick="cek_valid_sandi()" id="tampil"  class="fa fa-eye fa-1x"></i><span id="perintah"> Tampilkan</span>
+				</li>
+				<li class="list-group-item">
+					<button class="btn btn-primary"><i class="fa fa-sign-in-alt"></i> Masuk</button>
+					<button class="btn btn-warning"><i class="fa fa-redo"></i> Ulangi</button>
+				</li>
+			</ul>             
+                		<style>
+                            #panjang_pass1{
+                                margin-top:10px;
+                                margin-right:20px;
+                                display:none;
+                                text-align:right;
+                            }       
+
+                            #panjang_pass{
+                                color:orange;
+                            }                                              
+                        </style>
+
+                        <script>                    
+                            function cek_sandi(){
+                                $sandi1 = document.getElementById("sandi").value.length;                    
+                                if($sandi1 < 8){                            
+                                    document.getElementById("panjang_pass1").style.display = "block";
+                                }else{
+                                            if($sandi1 >= 8){
+                                                document.getElementById("panjang_pass1").style.display = "display";
+                                                document.getElementById("panjang_pass").style.color = "green";
+                                                document.getElementById("panjang_pass").innerHTML = "Bagus"; 
+                                            }
+                                            
+                                            if($sandi1 > 50){
+                                                document.getElementById("panjang_pass1").style.display = "display";
+                                                document.getElementById("panjang_pass").style.color = "red";
+                                                document.getElementById("panjang_pass").innerHTML = "Terlalu Banyak";  
+                                            }
+                                }
+                                if($sandi1 < 8){
+                                             document.getElementById("panjang_pass1").style.display = "display";
+                                              document.getElementById("panjang_pass").style.color = "orange";
+                                    document.getElementById("panjang_pass").innerHTML = "Lemah"; 
+                                }
+                            }
+                        </script>
+
+                        <style>
+                            #tampil{
+                               cursor:pointer;
+                            }
+                        </style>
+                        <script>
+                            function cek_valid_sandi(){
+                                    if(document.getElementById("sandi").type == "password")
+                                        {
+                                            document.getElementById("sandi").type = "text";
+                                            document.getElementById("perintah").innerHTML = " Sembunyikan";
+                                            document.getElementById("tampil").innerHTML = "<i class='fa fa-eye-slash fa-2x' id='tampil'>";
+                                        }
+                                    else if(document.getElementById("sandi").type == "text")
+                                        {
+                                            document.getElementById("sandi").type = "password";
+                                            document.getElementById("perintah").innerHTML = " Tampilkan";
+                                            document.getElementById("tampil").innerHTML = "<i class='fa fa-eye fa-2x' id='tampil'></i>";
+                                        }
+                            }
+                        </script>
+		</div>
+	
+
+</body>
+</html>

@@ -1,0 +1,185 @@
+.navbar-default{
+	background: #400080;	
+	/* backgroud warna navbar */
+}
+
+.navbar-brand{
+	width:230px;
+	/* besar navbar brand */
+
+	color:white !important;
+	/* warnanya */
+
+	font-family: "darah";
+	/* set font familly */
+}
+
+@font-face{
+	src: url(../font/darah.ttf);
+	font-family: "darah";
+}
+
+@font-face{
+	src: url(../font/gelembung.ttf);
+	font-family: "gelembung";
+}
+
+
+@font-face{
+	src: url(../font/keroak.ttf);
+	font-family:  "keroak";
+}
+
+@font-face{
+	src : url(../font/mengerikan.ttf);
+	font-family:  "mengerikan";
+}
+
+@font-face{
+	src: url(../font/tegas1.ttf);
+	font-family:  "tegas1";
+}
+
+@font-face{
+	src: url(../font/tegas2.ttf);
+	font-family:  "tegas2";
+}
+
+#navbar > ul > li > a{
+	color:white;
+	font-family: "mengerikan";
+}
+
+#navbar > ul > li > ul > li >a{
+	/*padding: 10px;*/
+}
+
+@media(max-width: 768px){
+	#navbar > ul > li > ul > li > a{
+		color: white;
+	}
+	#navbar > ul > li > ul > li > a:hover{
+		background: blue;
+	}
+}
+
+#navbar > ul > li > a:hover{
+	background: blue;
+}
+
+#navbar > ul > li > ul > li > a:hover{
+	/* background: blue !important;*/
+}
+
+#navbar >  ul > li > a:focus{
+	background: blue !important;
+}
+
+span[icon="atas"]{	
+	margin-top: -12px;
+	margin-left: -3px;
+	position: absolute;;
+}
+
+@media(max-width: 768px){
+	span[atas="label"]{		
+		margin-top: 0px;
+		margin-left: 3px;
+	}
+}
+
+.menu_dash{
+	display: none;
+}
+
+.container-fluid > .menu_dash ul > li > ul > li{
+	width:205px !important;
+}
+.container-fluid > .menu_dash > ul > li > div > center > img{
+	width: 100px;
+}
+
+.container-fluid > .menu_dash > ul > li >div{
+	color: white;
+	padding-bottom: 10px;
+}
+.container-fluid > .menu_dash ul > li > ul{
+	border-radius: 0px;
+}
+.container-fluid > .menu_dash ul > li > ul > li > a{
+	color: black;
+}
+.container-fluid > .menu_dash ul > li > ul > li > a:hover{
+	background: blue;
+	color: white;
+}
+.container-fluid > .menu_dash > ul > li > ul {
+	background:  white;
+}
+
+@media(min-width: 768px){
+	.menu_dash{
+		background: #000040;
+		position: fixed;
+
+		top:51px;		
+		bottom: 0;
+    	left: 0;
+
+		display: block;
+		padding: 10px;
+
+
+		overflow-y:auto;
+		overflow-x:hidden;
+	}
+	
+	.menu_dash > ul > li > a{
+		color: white;
+		font-family: "mengerikan";
+	}
+	.menu_dash > ul > li > a:focus{
+		background: blue !important;
+	}
+	.menu_dash > ul > li > a:hover{
+		background: blue !important;
+	}
+}
+
+.isi{
+	margin-top: 61px;
+	padding: 10px;
+}
+
+.menu_profil{
+    width:300px;
+   	margin: 0px !important;
+    border: 0px solid gray;
+}
+        			
+.menu_profil > .profil_kepala{
+    padding: 10px;
+    background: blue;
+    border-top: 0px solid gray;
+    margin-top: 0px;
+    color: white;
+}
+
+.menu_profil > .profil_kepala > center > h1 > img{ 
+	width: 100px !important;
+}
+
+.menu_profil > .profil_body{
+   padding:10px;
+   background: white;
+}
+.menu_profil > .profil_footer{
+   background: lightgray;
+   padding:20px;
+}
+
+@media(max-width: 768px){
+	.menu_profil{
+    	display: none;
+	}        
+}			
